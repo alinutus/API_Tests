@@ -1,1 +1,5 @@
-org\example\RestAssuredClient.class
+pojo\Lists.class
+utils\AllureAppender.class
+parser\JsonParser.class
+pojo\ListsResults.class
+pojo\Rating.class

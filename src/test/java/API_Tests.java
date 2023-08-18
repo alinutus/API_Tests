@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -22,6 +23,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("GET Movie Lists, expected response with Status 200")
     public static void getListStatus200(){
         Response response = given()
                 .when()
@@ -36,7 +38,8 @@ public class API_Tests {
     }
 
     @Test
-    public static void getListStatus404(){
+    @Description("GET Collection With Nonexistent CollectionId, expected response with Status 404")
+    public static void getCollectionStatus404(){
         given()
                 .when()
                 .get("3/collection/collection_id")
@@ -48,7 +51,8 @@ public class API_Tests {
     }
 
     @Test
-    public static void getListStatus422(){
+    @Description("GET Movie With Nonexistent MovieId, expected response with Status 422")
+    public static void getMovieStatus422(){
         given().queryParam("page", "4454545")
                 .when()
                 .get("3/movie/now_playing")
@@ -61,6 +65,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("POST Add Rating To Movie, expected response with Status 200")
     public static void postAddRatingToMovieStatus200(){
         Response response = given().body("{\"value\":\"7\"}")
                 .contentType(ContentType.JSON)
@@ -75,7 +80,8 @@ public class API_Tests {
     }
 
     @Test
-    public static void postCreateSessionStatus400(){
+    @Description("POST Token With Nonexistent Login, expected response with Status 400")
+    public static void postCreateTokenStatus400(){
         given().queryParam("RAW_BODY", "")
                 .when()
                 .post("3/authentication/token/validate_with_login")
@@ -87,6 +93,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("POST Session With Empty Body, expected response with Status 404")
     public static void postCreateSessionStatus404(){
         given().queryParam("RAW_BODY", "")
                 .when()
@@ -99,6 +106,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("DELETE Movie Rating, expected response with Status 200")
     public static void deleteRatingStatus200(){
         Response response = given()
                 .when()
@@ -113,6 +121,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("DELETE Nonexistent Movie Rating, expected response with Status 404")
     public static void deleteRatingStatus404(){
         given()
                 .when()
@@ -126,6 +135,7 @@ public class API_Tests {
     }
 
     @Test
+    @Description("DELETE Movie Rating With Nonexistent SessionId, expected response with Status 401")
     public static void deleteRatingStatus401(){
         given().queryParam("session_id", "35353")
                 .when()
