@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15a0ed2-e89b-4bfa-b7bd-35aa9477beb0" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/allure.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="5f655c57-34bb-4dfb-8999-3beb6fc0c2a1" name="Changes" comment="allure report is fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/API_Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/API_Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/API_Tests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,53 +16,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2U6po2IbSlFIN8cl4KwcgKiJ1CT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Java/API/src/main/resources",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Java\API\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\API\src\main\java\pojo" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="utils" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.API_Tests">
+  <component name="RunManager">
     <configuration name="API_Tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="api_tmdb" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,100 +32,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="API_Tests.deleteRatingStatus200 (2)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api_tmdb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API_Tests" />
-      <option name="METHOD_NAME" value="deleteRatingStatus200" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="API_Tests.getListStatus200 (2)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api_tmdb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API_Tests" />
-      <option name="METHOD_NAME" value="getListStatus200" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="API_Tests.getListStatus200 (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api_tmdb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API_Tests" />
-      <option name="METHOD_NAME" value="getListStatus200" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="API_Tests.getListStatus200" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api_tmdb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API_Tests" />
-      <option name="METHOD_NAME" value="getListStatus200" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="API_Tests.getToken (1)" type="TestNG" nameIsGenerated="true">
-      <module name="api_tmdb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API_Tests" />
-      <option name="METHOD_NAME" value="getToken" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.API_Tests" />
-        <item itemvalue="TestNG.API_Tests.getListStatus200 (3)" />
-        <item itemvalue="TestNG.API_Tests.getListStatus200" />
-        <item itemvalue="TestNG.API_Tests.getListStatus200 (2)" />
-        <item itemvalue="TestNG.API_Tests.deleteRatingStatus200 (2)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="e15a0ed2-e89b-4bfa-b7bd-35aa9477beb0" name="Changes" comment="" />
-      <created>1692270055634</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1692270055634</updated>
-    </task>
-    <task id="LOCAL-00001" summary="add gitignore">
-      <created>1692360895127</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1692360895127</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add gitignore">
-      <created>1692361295652</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1692361295652</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,28 +51,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/parser/JsonParser.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="TestNG">
-        <watch expression="((RestAssuredResponseImpl)response).groovyResponse" custom="io.restassured.internal.RestAssuredResponseImpl" />
-        <watch expression="((RestAssuredResponseOptionsGroovyImpl)((RestAssuredResponseImpl)response).groovyResponse).metaClass" custom="io.restassured.internal.RestAssuredResponseOptionsGroovyImpl,io.restassured.internal.RestAssuredResponseImpl" />
-        <watch expression="((RestAssuredResponseOptionsGroovyImpl)((RestAssuredResponseImpl)response).groovyResponse).statusLine" custom="io.restassured.internal.RestAssuredResponseOptionsGroovyImpl,io.restassured.internal.RestAssuredResponseImpl" />
-        <watch expression="((RestAssuredResponseOptionsGroovyImpl)((RestAssuredResponseImpl)response.then().extract().response()).groovyResponse).statusLine" custom="io.restassured.internal.RestAssuredResponseOptionsGroovyImpl,io.restassured.internal.RestAssuredResponseImpl" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

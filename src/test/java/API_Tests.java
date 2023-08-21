@@ -34,13 +34,13 @@ public class API_Tests {
                 .extract()
                 .response();
         System.out.println(JsonParser.readListsResponse(response));
-        log.info("GET Movie Lists Status 200");
+        log.info("GET Movie Lists, Status 200" + response);
     }
 
     @Test
     @Description("GET Collection With Nonexistent CollectionId, expected response with Status 404")
     public static void getCollectionStatus404(){
-        given()
+        Response response = given()
                 .when()
                 .get("3/collection/collection_id")
                 .then()
@@ -48,12 +48,14 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("GET Collection, Status 404" + response);
     }
 
     @Test
     @Description("GET Movie With Nonexistent MovieId, expected response with Status 422")
     public static void getMovieStatus422(){
-        given().queryParam("page", "4454545")
+        Response response = given().queryParam("page", "4454545")
                 .when()
                 .get("3/movie/now_playing")
                 .then()
@@ -62,6 +64,8 @@ public class API_Tests {
                 .body("errors", contains("page must be less than or equal to 500"))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("GET Movie, Status 422" + response);
     }
 
     @Test
@@ -77,12 +81,13 @@ public class API_Tests {
                 .extract()
                 .response();
         System.out.println(JsonParser.readRatingResponse(response));
+        log.info("POST Add Rating To Movie, Status 200" + response);
     }
 
     @Test
     @Description("POST Token With Nonexistent Login, expected response with Status 400")
     public static void postCreateTokenStatus400(){
-        given().queryParam("RAW_BODY", "")
+        Response response = given().queryParam("RAW_BODY", "")
                 .when()
                 .post("3/authentication/token/validate_with_login")
                 .then()
@@ -90,12 +95,14 @@ public class API_Tests {
                 .body("status_message", equalTo("Invalid parameters: Your request parameters are incorrect."))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("POST Token, Status 400" + response);
     }
 
     @Test
     @Description("POST Session With Empty Body, expected response with Status 404")
     public static void postCreateSessionStatus404(){
-        given().queryParam("RAW_BODY", "")
+        Response response = given().queryParam("RAW_BODY", "")
                 .when()
                 .post("3/authentication/session/new")
                 .then()
@@ -103,6 +110,8 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("GET Session, Status 404" + response);
     }
 
     @Test
@@ -118,12 +127,13 @@ public class API_Tests {
                 .extract()
                 .response();
         System.out.println(JsonParser.readRatingResponse(response));
+        log.info("DELETE Rating, Status 200" + response);
     }
 
     @Test
     @Description("DELETE Nonexistent Movie Rating, expected response with Status 404")
     public static void deleteRatingStatus404(){
-        given()
+        Response response = given()
                 .when()
                 .contentType(ContentType.JSON)
                 .delete("/3/movie/569/rating")
@@ -132,12 +142,14 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("DELETE Rating, Status 404" + response);
     }
 
     @Test
     @Description("DELETE Movie Rating With Nonexistent SessionId, expected response with Status 401")
     public static void deleteRatingStatus401(){
-        given().queryParam("session_id", "35353")
+        Response response = given().queryParam("session_id", "35353")
                 .when()
                 .contentType(ContentType.JSON)
                 .delete("/3/movie/5690/rating")
@@ -146,5 +158,7 @@ public class API_Tests {
                 .body("status_message", equalTo("Authentication failed: You do not have permissions to access the service."))
                 .extract()
                 .response();
+        System.out.println(JsonParser.readRatingResponse(response));
+        log.info("DELETE Rating, Status 401" + response);
     }
 }
