@@ -3,7 +3,7 @@ package pojo;
 import lombok.Getter;
 
 @Getter
-public class Rating {
+public class Response {
     boolean success;
     int status_code;
     String status_message;

@@ -1,9 +1,0 @@
-<configuration>
-    <appender name="ALLURE" class="utils.AllureAppender">
-        <prefix>test</prefix>
-    </appender>
-
-    <root level="info">
-        <appender-ref ref="ALLURE"/>
-    </root>
-</configuration>

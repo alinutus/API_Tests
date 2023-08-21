@@ -3,14 +3,15 @@ package utils;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
 import io.qameta.allure.Allure;
+import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static java.lang.String.format;
 
+@Slf4j
 public class AllureAppender extends AppenderBase<ILoggingEvent> {
-
     private String prefix;
 
     @Override

@@ -48,7 +48,7 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("GET Collection, Status 404" + response);
     }
 
@@ -64,7 +64,7 @@ public class API_Tests {
                 .body("errors", contains("page must be less than or equal to 500"))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponseWithErrors(response));
         log.info("GET Movie, Status 422" + response);
     }
 
@@ -80,7 +80,7 @@ public class API_Tests {
                 .body("status_message", equalTo("The item/record was updated successfully."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("POST Add Rating To Movie, Status 200" + response);
     }
 
@@ -95,7 +95,7 @@ public class API_Tests {
                 .body("status_message", equalTo("Invalid parameters: Your request parameters are incorrect."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("POST Token, Status 400" + response);
     }
 
@@ -110,7 +110,7 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("GET Session, Status 404" + response);
     }
 
@@ -126,7 +126,7 @@ public class API_Tests {
                 .body("status_message", equalTo("The item/record was deleted successfully."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("DELETE Rating, Status 200" + response);
     }
 
@@ -142,7 +142,7 @@ public class API_Tests {
                 .body("status_message", equalTo("The resource you requested could not be found."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("DELETE Rating, Status 404" + response);
     }
 
@@ -158,7 +158,7 @@ public class API_Tests {
                 .body("status_message", equalTo("Authentication failed: You do not have permissions to access the service."))
                 .extract()
                 .response();
-        System.out.println(JsonParser.readRatingResponse(response));
+        System.out.println(JsonParser.readResponse(response));
         log.info("DELETE Rating, Status 401" + response);
     }
 }
