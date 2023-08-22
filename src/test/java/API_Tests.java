@@ -1,10 +1,12 @@
 import io.qameta.allure.Description;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import parser.JsonParser;
 
@@ -20,6 +22,11 @@ public class API_Tests {
     {
         RestAssured.baseURI = "https://api.themoviedb.org/";
         RestAssured.authentication = oauth2("eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkM2YwNDU4MTY1YzJiMjk1ZjhhNGJkNzAzZGI3OTAyNyIsInN1YiI6IjY0ZDlkZDBjMDAxYmJkMDBjNmM4MzBmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fJzaosXuEDe18UwgDwmdFZIMXp3ZNwvufC-VypprkCA");
+    }
+
+    @BeforeTest
+    public void logsToAllure(){
+        RestAssured.filters(new AllureRestAssured());
     }
 
     @Test
